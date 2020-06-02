@@ -1,0 +1,33 @@
+<% include partials/header %>
+
+<header class="jumbotron">
+    
+<h1 style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; color: blueviolet; text-align: center; text-decoration:underline overline wavy blueviolet;">Hey Fellas Welcome to Yelpcamp!</h1>
+
+<a class="btn btn-primary btn-lg"href="/campgrounds/new">Add New camp!!</a>
+</div>
+</header>
+
+
+
+<% campgrounds.forEach(function(campground){ %>
+<div class="container fluid">
+
+<div class="row">
+
+<div class="col-md-6 col-sm-6">
+   
+<div class="img-thumbnail">
+    <img src="<%= campground.image %>">
+      
+    <h3 style="text-align: center; font-family: Georgia, 'Times New Roman', Times, serif; color: darkcyan; margin-top: 10px;"  <%= campground.name %> ></h3>
+    </div>
+    <p>
+      <a href="/campgrounds/<%=campground._id%>" class="btn btn-primary">more info</a>
+    </p>
+  </div>
+  </div>
+  </div>
+
+<% }); %>
+<% include partials/footerr.ejs %>
